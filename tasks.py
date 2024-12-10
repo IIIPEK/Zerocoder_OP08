@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import PhotoImage
 import os
-os.environ['TCL_LIBRARY'] = r'C:\Users\adm\AppData\Local\Programs\Python\Python313\tcl\tcl8.6'
-os.environ['TK_LIBRARY'] = r'C:\Users\adm\AppData\Local\Programs\Python\Python313\tcl\tk8.6'
+# Используется для Python 3.13 для обхода бага с созданием venv без tkinter
+# os.environ['TCL_LIBRARY'] = r'C:\Users\adm\AppData\Local\Programs\Python\Python313\tcl\tcl8.6'
+# os.environ['TK_LIBRARY'] = r'C:\Users\adm\AppData\Local\Programs\Python\Python313\tcl\tk8.6'
 
 def add_task():
     task = entr_task.get()
@@ -19,7 +20,7 @@ def delete_task():
 def mark_task():
     selected_task = lbx_list.curselection()
     if selected_task:
-        lbx_list.itemconfig(selected_task, bg = "green" )
+        lbx_list.itemconfig(selected_task, bg = "light blue" )
         lbx_list.selection_clear(0, tk.END)
 
 main_window = tk.Tk()
@@ -31,8 +32,9 @@ main_window.columnconfigure(0, weight=1)
 main_window.rowconfigure(4, weight=1)
 bg_image = PhotoImage(file="bg.png")
 
-
-lbl_task = tk.Label(main_window, text="Enter task", width= main_window.winfo_screenwidth())
+lbl_bg = tk.Label(main_window, image=bg_image)
+lbl_bg.place(x=0,y=0,relwidth=1, relheight=1)
+lbl_task = tk.Label(main_window, text="Enter task", bg='light slate blue', fg='white')#, width= main_window.winfo_screenwidth())
 lbl_task.grid(row=0,column = 0, columnspan=3, pady = [10,5])
 
 entr_task = tk.Entry(main_window,  bg="lightblue")
