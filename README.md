@@ -12,7 +12,7 @@ A simple task management application built using Python's Tkinter library. This 
 
 ## Screenshot
 
-*(Insert a screenshot of the application here if available)*
+![Task List Application Screenshot](screenshot.png)
 
 ## Prerequisites
 
@@ -23,8 +23,8 @@ Ensure you have Python installed on your system. This project was developed with
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/task-list.git
-   cd task-list
+   git clone https://github.com/IIIPEK/Zerocoder_OP08
+   cd Zerocoder_OP08
    ```
 
 2. Install required dependencies (if any):
@@ -74,4 +74,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests for 
 
 ## Contact
 
-For questions or feedback, reach out to [your-email@example.com](mailto:your-email@example.com).
+For questions or feedback, reach out to ivan.vorobjov(at)gmail.com.
